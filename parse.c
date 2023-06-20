@@ -55,7 +55,7 @@ void parsefile(FILE *file)
 	meta->file = file;
 	meta->stack = NULL;
 	meta->buf = NULL;
-/*
+
 	while (getline(&(meta->buf), &size, meta->file) != -1)
 	{
 		line.number++;
@@ -63,7 +63,7 @@ void parsefile(FILE *file)
 		if (line.content)
 			get_op_func(line, meta)(&(meta->stack), line.number);
 	}
-*/
+
 	free(meta->buf);
 	free_stack(&(meta->stack));
 	fclose(meta->file);
